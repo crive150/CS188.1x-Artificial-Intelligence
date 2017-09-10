@@ -34,6 +34,15 @@ def buyLotsOfFruit(orderList):
     """
     totalCost = 0.0
     "*** YOUR CODE HERE ***"
+    for i in orderList:
+        if i[0] in fruitPrices: 
+            print(i[0])
+            print(fruitPrices[i[0]])
+            totalCost += (fruitPrices[i[0]] * i[1])
+        else:
+            print("Error! This fruit is not available.")
+            return None
+    
     return totalCost
 
 # Main Method
